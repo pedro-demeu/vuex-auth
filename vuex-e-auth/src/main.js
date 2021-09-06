@@ -4,8 +4,10 @@ import router from './router'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-Vue.config.productionTip = false
+import http from '@/http'
 
+Vue.config.productionTip = false
+Vue.prototype.$http = http
 new Vue({
   router,
   render: h => h(App)
