@@ -4,9 +4,7 @@ import Vue from 'vue'
 Vue.use(Vuex)
 const estado = {
     token: null,
-    usuario: {
-
-    }
+    usuario: {}
 }
 
 export default new Vuex.Store({
