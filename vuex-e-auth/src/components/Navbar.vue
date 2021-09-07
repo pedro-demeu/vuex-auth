@@ -23,12 +23,12 @@
 <script>
 import NavbarDeslogado from './NavbarDeslogado.vue';
 import NavbarLogado from './NavbarLogado.vue';
-export default {
+ export default {
   components: { NavbarDeslogado, NavbarLogado },
   
   computed: {
     usuarioestaLogado() {
-      return Boolean(localStorage.getItem("token"));
+      return Boolean(this.$store.state.token);
     },
   },
 };
