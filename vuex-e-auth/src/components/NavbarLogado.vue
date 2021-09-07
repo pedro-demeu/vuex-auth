@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import {logoutMixin} from '@/mixins' 
+import {logoutMixin} from '../mixins.js' 
 
 export default {
   mixins: [logoutMixin]

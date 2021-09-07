@@ -13,7 +13,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <navbar-logado v-if="usuarioestaLogado" />
+      <navbar-logado v-if="usuarioEstaLogado" />
       <navbar-deslogado v-else />
       
     </div>
@@ -23,13 +23,12 @@
 <script>
 import NavbarDeslogado from './NavbarDeslogado.vue';
 import NavbarLogado from './NavbarLogado.vue';
+import {mapGetters } from 'vuex'
  export default {
   components: { NavbarDeslogado, NavbarLogado },
   
   computed: {
-    usuarioestaLogado() {
-      return Boolean(this.$store.state.token);
-    },
+    ...mapGetters(['usuarioEstaLogado'])
   },
 };
 </script>

@@ -8,8 +8,8 @@
   </div>
 </template>
 
-<script>
-import {logoutMixin} from '@/mixins' 
+<script>  
+import {logoutMixin} from '../mixins.js' 
 export default {
 name: 'home',
 mixins: [logoutMixin]
