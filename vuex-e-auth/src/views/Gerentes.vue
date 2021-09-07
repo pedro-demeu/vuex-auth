@@ -24,6 +24,11 @@ export default {
     };
   },
   mounted () {
+
+    if (!this.$store.state.token) {
+      this.$router.push({ name: 'login'})
+    }
+
     this.$http.get('gerentes')
     .then(r => this.gerentes = r.data)
     .catch(err => console.log(err))
